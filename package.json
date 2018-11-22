@@ -1,0 +1,21 @@
+{
+  "name": "data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server .",
+    "build": "./scripts/build",
+    "watch": "./scripts/watch",
+    "deploy": "./scripts/deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "marked": "^0.5.2",
+    "node-sass": "^4.10.0"
+  }
+}

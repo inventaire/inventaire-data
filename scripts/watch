@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+echo "initial build"
+npm run build > /dev/null ;
+echo "starting to watch src directory"
+
+while true ;
+do
+  inotifywait -r ./src -e modify > /dev/null 2>&1 &&
+  node -p 'new Date().toLocaleTimeString() + ": update"' &&
+  npm run build > /dev/null ;
+done

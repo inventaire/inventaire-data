@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+const { readFileSync, writeFileSync } = require('fs')
+const marked = require('marked')
+const readMarkdownFile = file => marked(readFileSync(file).toString())
+
+const resources = require('../src/resources')
+const intro = readMarkdownFile('./src/intro.md')
+const index = require('../src/index')({ intro, resources })
+
+writeFileSync('./index.html', index)

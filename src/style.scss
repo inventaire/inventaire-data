@@ -1,0 +1,48 @@
+body{
+  text-align: center;
+}
+
+h1{
+  color: red;
+}
+
+#intro{
+  margin: 1em auto;
+  max-width: 60em;
+  text-align: left;
+  padding: 1em;
+  border-radius: 3px;
+  background-color: #eee;
+}
+
+#resources, #resources li{
+  list-style-type: none;
+  list-style-position: outside;
+  padding: 0;
+  margin: 0;
+}
+
+#resources{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  li{
+    background-color: green;
+    border-radius: 3px;
+    min-height: 5em;
+    /*Small screens*/
+    @media screen and (max-width: 25em) {
+      width: 100%;
+    }
+    /*Large screens*/
+    @media screen and (min-width: 25em) {
+      width: 25em;
+      margin: 1em;
+    }
+    &.todo{
+      opacity: 0.5;
+      background-color: red;
+    }
+  }
+}
