@@ -1,60 +1,21 @@
 const marked = require('marked')
-
-const resources = [
-  {
-    id: 'read',
-    header: 'Read the database',
-    image: null,
-    state: 'todo',
-    text: ''
-  },
-  {
-    id: 'write',
-    header: 'Edit the database',
-    image: null,
-    state: 'todo',
-    text: ''
-  },
-  {
-    id: 'api',
-    header: 'API',
-    image: null,
-    state: 'todo',
-    text: ''
-  },
-  {
-    id: 'dumps',
-    header: 'Dumps',
-    image: null,
-    state: 'todo',
-    text: ''
-  },
-  {
-    id: 'query',
-    header: 'Query',
-    image: null,
-    state: 'todo',
-    text: ''
-  },
-  {
-    id: 'statistics',
-    header: 'Statistics',
-    image: null,
-    state: 'todo',
-    text: ''
-  }
-]
+const resources = require('./resources_list')
 
 const buildResource = data => {
-  const { id, state, image, header, text } = data
-  const img = image ? `<img src="${image}" />` : ''
+  const { id, size, state, image, header, text } = data
+
+  const convertedText = marked(text.trim())
+
+  const style = image ? `style="background-image: url(assets/${image})"` : ''
+
+  const sizeClass = size || ''
 
   return `
-  <li id="$[id}" class="${state}">
-    <div class="illustration">${img}</div>
+  <li id="${id}" class="resource ${state} ${sizeClass}">
+    <div class="illustration" ${style}></div>
     <div class="description">
       <h3>${header}</h3>
-      <p>${marked(text)}</p>
+      <p>${convertedText}</p>
     </div>
   </li>`.trim()
 }

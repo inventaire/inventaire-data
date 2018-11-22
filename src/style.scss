@@ -1,9 +1,29 @@
+@import './fonts';
+
 body{
+  color: #222;
   text-align: center;
+  font-family: Alegreya Sans;
 }
 
 h1{
-  color: red;
+  font-size: 400%;
+  margin-bottom: 1rem;
+}
+
+h2{
+  font-size: 200%;
+}
+
+h1, h2, h3{
+  font-family: Alegreya;
+  font-weight: bold;
+}
+
+code{
+  background-color: #eee;
+  padding: 0.2em;
+  border-radius: 3px;
 }
 
 #intro{
@@ -12,37 +32,97 @@ h1{
   text-align: left;
   padding: 1em;
   border-radius: 3px;
-  background-color: #eee;
 }
 
-#resources, #resources li{
+#resources, .resource{
   list-style-type: none;
   list-style-position: outside;
   padding: 0;
   margin: 0;
+  max-width: 80em;
+  margin: 0 auto;
 }
+
+$big-resource-width: 76em;
+$resource-width: 36em;
+$illustration-size: 18em;
 
 #resources{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: baseline;
   flex-wrap: wrap;
-  li{
-    background-color: green;
-    border-radius: 3px;
-    min-height: 5em;
-    /*Small screens*/
-    @media screen and (max-width: 25em) {
+}
+
+.resource{
+  padding: 1em;
+  background-color: #eee;
+  border-radius: 3px;
+  min-height: 5em;
+  display: flex;
+  &.todo{
+    opacity: 0.5;
+    background-color: red;
+  }
+  h3{
+    margin: 0;
+    font-size: 150%;
+  }
+  code{
+    background-color: white;
+  }
+  /*Small screens*/
+  @media screen and (max-width: $resource-width) {
+    width: 90%;
+    flex-direction: column;
+    margin: 1em 0;
+    overflow: hidden;
+    .illustration{
+      height: 10em;
       width: 100%;
     }
-    /*Large screens*/
-    @media screen and (min-width: 25em) {
-      width: 25em;
-      margin: 1em;
+    .description{
+      padding: 1em 0;
+      ul{
+        padding: 0 0.5em;
+      }
     }
-    &.todo{
-      opacity: 0.5;
-      background-color: red;
+  }
+  /*Medium screens*/
+  @media screen and (min-width: $resource-width) {
+    width: $resource-width;
+    margin: 1em;
+    .illustration{
+      height: $illustration-size;
+      flex: 0 0 $illustration-size;
     }
+    .description{
+      padding: 0 1em;
+      ul{
+        padding: 0 1.5em;
+      }
+    }
+  }
+  /*Large screens*/
+  @media screen and (min-width: $resource-width) {
+    width: $resource-width;
+    &.big{
+      width: $big-resource-width;
+    }
+  }
+}
+
+.illustration{
+  background-size: cover;
+  border-radius: 3px;
+}
+
+.description{
+  text-align: left;
+  p{
+    margin-bottom: 0.5em;
+  }
+  li{
+    list-style: disc;
   }
 }
