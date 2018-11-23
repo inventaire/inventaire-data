@@ -7,4 +7,4 @@ const resources = require('../src/resources')
 const intro = readMarkdownFile('./src/intro.md')
 const index = require('../src/index')({ intro, resources })
 
-writeFileSync('./index.html', index)
+writeFileSync('./public/index.html', index)
