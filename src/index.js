@@ -8,9 +8,14 @@ module.exports = data => {
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>inventaire</h1>
-    <h2>The Wikidata-federated open bibliographic database</h2>
-    <section id="intro">${intro}</section>
+    <section id="landing">
+      <div id="text-wrapper">
+        <h1>inventaire</h1>
+        <h2>The Wikidata-federated open bibliographic database</h2>
+        <div id="intro">${intro}</div>
+      </div>
+      <div id="landing-overlay"></div>
+    </section>
     <ul id="resources">${resources}</ul>
   </body>
   </html>`

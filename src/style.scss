@@ -4,9 +4,40 @@ body{
   color: #222;
   text-align: center;
   font-family: Alegreya Sans;
+  margin: 0;
+  padding: 0;
+}
+
+#landing{
+  position: relative;
+  background-image: url(https://inventaire.io/img/assets/brittanystevens.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding: 2em;
+}
+
+#landing-overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #222;
+  opacity: 0.8;
+}
+
+#text-wrapper{
+  background-color: rgba(white, 0.85);
+  padding: 1em;
+  border-radius: 3px;
+  max-width: 50em;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
 }
 
 h1{
+  margin-top: 0;
   font-size: 400%;
   margin-bottom: 1rem;
 }
@@ -27,10 +58,10 @@ code{
 }
 
 #intro{
-  margin: 1em auto;
+  margin-top: 1em;
   max-width: 60em;
   text-align: left;
-  padding: 1em;
+  padding: 0 1em;
   border-radius: 3px;
 }
 
