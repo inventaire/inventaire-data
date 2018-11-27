@@ -30,9 +30,9 @@ Example: [/entity/inv:0a68df5f187729a463e3b74ee80f0b1a.json](https://inventaire.
   {
     id: 'query',
     header: 'SPARQL Query',
-    image: null,
-    state: 'coming-soon',
-    text: ''
+    image: 'inventaire_query_service.jpg',
+    state: '',
+    text: "Inventaire now has its own SPARQL Query interface! It's still somewhat experimental/unstable, but you can already play with it: [query.inventaire.io](https://query.inventaire.io)"
   },
   {
     id: 'dumps',
