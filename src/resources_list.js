@@ -46,6 +46,6 @@ Example: [/entity/inv:0a68df5f187729a463e3b74ee80f0b1a.json](https://inventaire.
     header: 'Statistics',
     image: null,
     state: 'coming-soon',
-    text: ''
+    text: 'Coming soon'
   }
 ]
