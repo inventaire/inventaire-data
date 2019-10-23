@@ -7,6 +7,7 @@
     "start": "live-server ./public",
     "build": "./scripts/build",
     "watch": "./scripts/watch",
+    "deploy": "echo \"Error: this project is simply a folder behind an HTTP server\" && dig data.inventaire.io | grep 'ANSWER SECTION' -A 1 | tail -n 1 && exit 1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
