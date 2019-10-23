@@ -1,6 +1,8 @@
 # [data.inventaire.io](https://data.inventaire.io)
 
-This repo generates the HTML + CSS files that make [data.inventaire.io](https://data.inventaire.io)
+This repo generates the HTML + CSS files that make [data.inventaire.io](https://data.inventaire.io).
+
+You could arg that this is an overengineering for a dumb HTML+CSS page. You would be right.
 
 ## Development
 ```sh
