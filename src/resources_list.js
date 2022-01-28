@@ -41,11 +41,4 @@ Example: [/entity/inv:0a68df5f187729a463e3b74ee80f0b1a.json](https://inventaire.
     state: '',
     text: '[Yeay, dumps!](https://dumps.inventaire.io)'
   },
-  {
-    id: 'statistics',
-    header: 'Statistics',
-    image: null,
-    state: 'coming-soon',
-    text: 'Coming soon'
-  }
 ]
